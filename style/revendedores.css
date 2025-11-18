@@ -1,0 +1,141 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Corpo com mesmo estilo */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    min-height: 100dvh;
+
+    background: linear-gradient(135deg, #71c9ff, #b4e1ff);
+}
+
+/* Form principal no mesmo estilo clean */
+form {
+    background: #ffffff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Inputs iguais ao estilo superior */
+input {
+    padding: 10px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #0077c2;
+    outline: none;
+    box-shadow: 0 0 4px #79bfff;
+}
+
+/* Botões com mesmo estilo geral */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.2s ease;
+}
+
+/* Botão cadastrar (azul padrão) */
+button[name="acao"][value="cadastrar"] {
+    background: #0077c2;
+}
+button[name="acao"][value="cadastrar"]:hover {
+    background: #005a91;
+}
+
+/* Botão exibir (verde) — mesmo estilo do código superior */
+button[name="acao"][value="exibir"] {
+    background: #4caf50;
+}
+button[name="acao"][value="exibir"]:hover {
+    background: #3e8e41;
+}
+
+/* Link voltar com estilo padronizado */
+a {
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #004c99;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #002d5c;
+}
+
+/* Tabela com o mesmo estilo clean do primeiro código */
+table {
+    margin-top: 25px;
+    border-collapse: collapse;
+    width: 780px;
+
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Cabeçalho */
+thead {
+    background: #0077c2;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* Corpo da tabela */
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #eeeeee;
+    text-align: center;
+}
+
+/* Hover suave */
+tbody tr:hover {
+    background: #f5faff;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

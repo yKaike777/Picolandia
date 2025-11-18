@@ -1,0 +1,196 @@
+/* Reset básico para consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    height: 100dvh;
+    background: linear-gradient(135deg, #71c9ff, #b4e1ff);
+    padding: 20px;
+}
+
+/* Card do form */
+form {
+    background: #ffffff;
+    width: 380px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #0077c2;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Seções dos inputs */
+#sabor-embalagem-container,
+#nome-preco-container {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+#sabor-container, #embalagem-container{
+    width: 50%;
+}
+#nome-container{
+    width: 80%;
+}
+
+#preco-container{
+    width: 20%;
+}
+
+#sabor-container, #embalagem-container,
+#nome-container, #preco-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Inputs e selects */
+input, select {
+    padding: 10px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    transition: 0.2s;
+    font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+    border-color: #0077c2;
+    outline: none;
+    box-shadow: 0 0 4px #79bfff;
+}
+
+/* Radios (tipos de picolé) */
+#tipo_radio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#tipo_radio label {
+    background: #e7f4ff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: 1px solid #a5d3ff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#tipo_radio input[type="radio"] {
+    display: none;
+}
+
+#tipo_radio input[type="radio"]:checked + label {
+    background: #0077c2;
+    color: white;
+    border-color: #005a91;
+}
+
+/* Área dos botões */
+#button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Botões */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #0077c2;
+    color: white;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #005a91;
+}
+
+button[name="acao"][value="exibir"] {
+    background: #4CAF50;
+}
+
+button[name="acao"][value="exibir"]:hover {
+    background: #3e8e41;
+}
+
+/* Link voltar */
+a {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #004c99;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #002d5c;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tabela exibida */
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 780px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #0077c2;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 1rem;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background: #f5faff;
+}
