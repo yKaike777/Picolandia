@@ -11,7 +11,7 @@
 <form action="revendedores.php" method="post">
     <input type="text" name="nome" placeholder="Nome" required>
     <input type="text" name="telefone" placeholder="Telefone" required>
-    <input type="text" name="cpf" placeholder="CPF" required>
+    <input type="text" name="cpf" placeholder="CNPJ" required>
 
     <button type="submit" name="acao" value="cadastrar">Cadastrar Revendedor</button>
     <button type="submit" name="acao" value="exibir" formnovalidate>Exibir Revendedores</button>
